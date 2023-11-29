@@ -17,14 +17,14 @@ function App() {
       <MainTemplate>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/account" element={<Account />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/history" element={<History />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/reservation" element={<Reservation />} />
-          <Route path="/restaurant" element={<Restaurant />} />
-          <Route path="/tickets" element={<Tickets />} />
+          <Route path="/konto" element={<Account />} />
+          <Route path="/galeria" element={<Gallery />} />
+          <Route path="/historia" element={<History />} />
+          <Route path="/logowanie" element={<Login />} />
+          <Route path="/rejestracja" element={<Register />} />
+          <Route path="/rezerwacja" element={<Reservation />} />
+          <Route path="/restauracja" element={<Restaurant />} />
+          <Route path="/bilety" element={<Tickets />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </MainTemplate>

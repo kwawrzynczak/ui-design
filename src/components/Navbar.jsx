@@ -1,6 +1,15 @@
 import { twMerge } from 'tailwind-merge';
 import '../styles/Burger.css';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+
+const tabs = [
+  { name: 'Strona główna', path: '/' },
+  { name: 'Bilety', path: '/bilety' },
+  { name: 'Galeria', path: '/galeria' },
+  { name: 'Restauracja', path: '/restauracja' },
+  { name: 'Rezerwacja', path: '/rezerwacja' },
+];
 
 const Navbar = () => {
   const [checked, setChecked] = useState(false);
@@ -10,12 +19,14 @@ const Navbar = () => {
       <nav
         className={twMerge(
           'absolute right-0 top-[80px] flex h-screen flex-col gap-2 bg-white p-4 transition lg:static lg:h-auto lg:flex-row lg:gap-6 lg:bg-transparent lg:p-0',
-          checked ? 'translate-x-0' : 'translate-x-full max-lg:hidden lg:translate-x-0',
+          checked ? 'translate-x-0' : 'translate-x-full lg:translate-x-0',
         )}
       >
-        <a>Link 1</a>
-        <a>Link 2</a>
-        <a>Link 3</a>
+        {tabs.map(({ name, path }) => (
+          <NavLink key={name} to={path}>
+            {name}
+          </NavLink>
+        ))}
       </nav>
       <label className="burger lg:hidden" htmlFor="burger">
         <input
