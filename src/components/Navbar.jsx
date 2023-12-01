@@ -2,6 +2,7 @@ import '../styles/Burger.css';
 import { twMerge } from 'tailwind-merge';
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import AccountOptions from './AccountOptions';
 
 const tabs = [
   { name: 'Strona główna', path: '/' },
@@ -31,26 +32,15 @@ const Navbar = () => {
               {name}
             </NavLink>
           ))}
-
+          {/* Niezalogowany */}
           <NavLink
             to="/logowanie"
             className="mt-2 rounded-full border-2 border-white px-3.5 py-2 text-center lg:mt-0"
           >
             Logowanie
           </NavLink>
-
-          <NavLink to="/konto" className="lg:hidden">
-            Zarządzaj kontem
-          </NavLink>
-          <NavLink to="/historia" className="lg:hidden">
-            Historia rezerwacji
-          </NavLink>
-          <NavLink
-            to="/"
-            className="mt-2 rounded-full border-2 border-white px-3.5 py-2 text-center lg:mt-0 lg:hidden"
-          >
-            Wyloguj się
-          </NavLink>
+          {/* Zalogowany */}
+          <AccountOptions />
         </nav>
         <label className="burger lg:hidden" htmlFor="burger">
           <input

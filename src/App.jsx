@@ -1,4 +1,3 @@
-import MainTemplate from './templates/MainTemplate';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Account from './pages/Account';
@@ -10,11 +9,12 @@ import Reservation from './pages/Reservation';
 import Restaurant from './pages/Restaurant';
 import Tickets from './pages/Tickets';
 import NotFound from './pages/NotFound';
+import Layout from './layouts/layout';
 
 function App() {
   return (
     <BrowserRouter>
-      <MainTemplate>
+      <Layout>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/konto" element={<Account />} />
@@ -27,7 +27,7 @@ function App() {
           <Route path="/bilety" element={<Tickets />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </MainTemplate>
+      </Layout>
     </BrowserRouter>
   );
 }

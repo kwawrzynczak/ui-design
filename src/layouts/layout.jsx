@@ -1,7 +1,7 @@
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
-const MainTemplate = ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <div className="min-h-screen w-full">
       <Navbar />
@@ -11,4 +11,4 @@ const MainTemplate = ({ children }) => {
   );
 };
 
-export default MainTemplate;
+export default Layout;
