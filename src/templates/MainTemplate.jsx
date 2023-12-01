@@ -3,9 +3,9 @@ import Navbar from '../components/Navbar';
 
 const MainTemplate = ({ children }) => {
   return (
-    <div className="min-h-screen w-screen bg-[url('52905.jpg')] bg-cover bg-no-repeat">
+    <div className="min-h-screen w-full">
       <Navbar />
-      <div className="mx-auto h-screen ">{children}</div>
+      <div className="mx-auto h-screen">{children}</div>
       <Footer />
     </div>
   );
