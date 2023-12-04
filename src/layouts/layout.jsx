@@ -1,12 +1,15 @@
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import AuthProvider from '../contexts/AuthContext';
 
 const Layout = ({ children }) => {
   return (
     <div className="min-h-screen w-full">
-      <Navbar />
-      <div className="mx-auto h-screen">{children}</div>
-      <Footer />
+      <AuthProvider>
+        <Navbar />
+        <div className="mx-auto h-screen">{children}</div>
+        <Footer />
+      </AuthProvider>
     </div>
   );
 };
