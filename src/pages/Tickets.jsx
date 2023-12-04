@@ -1,7 +1,7 @@
 const Tickets = () => {
   return (
     <div>
-      <p>Homepage</p>
+      <p>Bilety</p>
     </div>
   );
 };

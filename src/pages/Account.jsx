@@ -1,7 +1,7 @@
 const Account = () => {
   return (
     <div>
-      <p>Homepage</p>
+      <p>Konto</p>
     </div>
   );
 };
