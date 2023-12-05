@@ -1,7 +1,7 @@
 const Account = () => {
   return (
     <div>
-      <p>Konto</p>
+      <h1 className="text-2xl font-bold tracking-wider text-white lg:text-3xl">Konto</h1>
     </div>
   );
 };

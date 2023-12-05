@@ -1,7 +1,9 @@
 const Gallery = () => {
   return (
     <div>
-      <p>Galeria</p>
+      <h1 className="text-center text-2xl font-bold tracking-wider text-white lg:text-3xl">
+        Galeria
+      </h1>
     </div>
   );
 };

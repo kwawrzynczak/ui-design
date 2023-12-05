@@ -24,6 +24,7 @@ const Navbar = () => {
 
   useEffect(() => {
     setChecked(false);
+    setOptionsShown(false);
   }, [location]);
 
   const handleLogout = (e) => {
@@ -91,7 +92,7 @@ const Navbar = () => {
           )}
         </nav>
 
-        {optionsShown && <AccountOptions />}
+        <AccountOptions shown={optionsShown} />
 
         <label className="burger lg:hidden" htmlFor="burger">
           <input
