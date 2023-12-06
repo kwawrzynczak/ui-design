@@ -9,10 +9,9 @@ import { useLocation } from 'react-router-dom';
 
 const tabs = [
   { name: 'Strona główna', path: '/' },
-  { name: 'Bilety', path: '/bilety' },
   { name: 'Galeria', path: '/galeria' },
   { name: 'Restauracja', path: '/restauracja' },
-  { name: 'Rezerwacja', path: '/rezerwacja' },
+  { name: 'Rezerwacja', path: '/bilety' },
 ];
 
 const Navbar = () => {

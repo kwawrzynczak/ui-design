@@ -1,10 +1,18 @@
 // import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { twMerge } from 'tailwind-merge';
-import { useEffect, useState } from 'react';
-useState;
-
+import { useAuthContext } from '../hooks/useAuthContext';
+import { useNavigate } from 'react-router-dom';
 const AccountOptions = () => {
+  const { authUser, setAuthUser, isLogged, setIsLogged } = useAuthContext();
+  const router = useNavigate();
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+    setAuthUser(null);
+    setIsLogged(false);
+    router('/');
+  };
   return (
     <div
       className={twMerge(
@@ -17,7 +25,10 @@ const AccountOptions = () => {
       <NavLink to="/historia" className="mb-2">
         Historia rezerwacji
       </NavLink>
-      <button className="rounded-full border-2 border-white px-3.5 py-2 text-center lg:mt-0">
+      <button
+        onClick={(e) => handleLogout(e)}
+        className="rounded-full border-2 border-white px-3.5 py-2 text-center"
+      >
         Wyloguj się
       </button>
     </div>
