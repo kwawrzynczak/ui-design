@@ -17,6 +17,8 @@ const RegisterForm = () => {
         <input type="email" className="h-8 px-1.5" />
         <label className="mt-2 text-lg text-white">Hasło</label>
         <input type="password" className="h-8 px-1.5" />
+        <label className="mt-2 text-lg text-white">Powtórz hasło</label>
+        <input type="password" className="h-8 px-1.5" />
         <button
           className="mt-6 cursor-pointer rounded-full border-2 border-white px-3.5 py-2 text-center text-lg font-semibold tracking-wider text-white"
           onClick={(e) => handleLogin(e)}

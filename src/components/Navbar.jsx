@@ -78,7 +78,6 @@ const Navbar = () => {
               </NavLink>
               <button
                 onClick={(e) => handleLogout(e)}
-                to="/logowanie"
                 className="mt-2 rounded-full border-2 border-white px-3.5 py-2 text-center lg:hidden"
               >
                 Wyloguj się
