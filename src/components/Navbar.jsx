@@ -92,7 +92,7 @@ const Navbar = () => {
           )}
         </nav>
 
-        <AccountOptions shown={optionsShown} />
+        {optionsShown && <AccountOptions />}
 
         <label className="burger lg:hidden" htmlFor="burger">
           <input
