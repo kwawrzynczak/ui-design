@@ -16,18 +16,15 @@ const AccountOptions = () => {
   return (
     <div
       className={twMerge(
-        'absolute right-60 top-[90px] flex-col gap-2 bg-black/20 text-lg font-semibold tracking-wider text-white lg:flex',
+        'border-t-1 absolute right-0 top-[80px] flex-col gap-2 border-2 border-white bg-primary p-2 text-lg font-semibold tracking-wider text-white lg:flex',
       )}
     >
-      <NavLink to="/konto" className="">
-        Zarządzaj kontem
-      </NavLink>
-      <NavLink to="/historia" className="mb-2">
+      <NavLink to="/historia" className="mx-2 my-2">
         Historia rezerwacji
       </NavLink>
       <button
         onClick={(e) => handleLogout(e)}
-        className="rounded-full border-2 border-white px-3.5 py-2 text-center"
+        className="rounded-full border-2 border-white px-3.5 py-2 text-center transition hover:bg-white hover:text-primary"
       >
         Wyloguj się
       </button>

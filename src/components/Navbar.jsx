@@ -35,18 +35,18 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center border-b">
-      <div className="flex h-20 w-full items-center justify-between bg-primary px-8 lg:w-3/4">
+      <div className="flex h-20 w-full items-center justify-between bg-primary px-8">
         <Link
           to={'/'}
-          className="text-3xl font-bold tracking-widest text-white lg:text-4xl"
+          className="text-3xl font-bold tracking-widest text-white xl:text-4xl"
           style={{ fontFamily: 'Fredoka, sans-serif' }}
         >
           Bajkolandia
         </Link>
         <nav
           className={twMerge(
-            'absolute right-0 top-[80px] flex h-screen w-[215px] flex-col gap-2 bg-primary p-4 text-lg font-semibold tracking-wider text-white transition duration-300 lg:static lg:h-auto lg:w-auto lg:flex-row lg:items-center lg:gap-8 lg:p-0',
-            checked ? 'translate-x-0' : 'translate-x-full lg:translate-x-0',
+            'absolute right-0 top-[80px] flex w-[215px] flex-col gap-2 border-y border-l bg-primary p-4 text-lg font-semibold tracking-wider text-white transition duration-300 xl:static xl:h-auto xl:w-auto xl:flex-row xl:items-center xl:gap-8 xl:border-none xl:p-0',
+            checked ? 'translate-x-0' : 'translate-x-full xl:translate-x-0',
           )}
         >
           {tabs.map(({ name, path }) => (
@@ -60,7 +60,7 @@ const Navbar = () => {
           {!isLogged && (
             <NavLink
               to="/logowanie"
-              className="mt-2 rounded-full border-2 border-white px-3.5 py-2 text-center lg:mt-0 lg:px-6"
+              className="mt-2 rounded-full border-2 border-white px-3.5 py-2 text-center transition hover:bg-white hover:text-primary xl:mt-0 xl:px-6"
             >
               Logowanie
             </NavLink>
@@ -70,20 +70,17 @@ const Navbar = () => {
 
           {isLogged && (
             <>
-              <NavLink to="/konto" className="lg:hidden">
-                Zarządzanie kontem
-              </NavLink>
-              <NavLink to="/historia" className="lg:hidden">
+              <NavLink to="/historia" className="xl:hidden">
                 Historia rezerwacji
               </NavLink>
               <button
                 onClick={(e) => handleLogout(e)}
-                className="mt-2 rounded-full border-2 border-white px-3.5 py-2 text-center lg:hidden"
+                className="mt-2 rounded-full border-2 border-white px-3.5 py-2 text-center transition hover:bg-white hover:text-primary xl:hidden"
               >
                 Wyloguj się
               </button>
 
-              <button onClick={() => setOptionsShown((prev) => !prev)} className="hidden lg:block">
+              <button onClick={() => setOptionsShown((prev) => !prev)} className="hidden xl:block">
                 <UserCircleIcon className="h-8 w-8 self-end text-white" />
               </button>
             </>
@@ -92,7 +89,7 @@ const Navbar = () => {
 
         {optionsShown && <AccountOptions />}
 
-        <label className="burger lg:hidden" htmlFor="burger">
+        <label className="burger xl:hidden" htmlFor="burger">
           <input
             type="checkbox"
             id="burger"

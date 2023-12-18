@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
     <div className="min-h-screen w-full">
       <AuthProvider>
         <Navbar />
-        <div className="my-20">{children}</div>
+        <div>{children}</div>
         <Footer />
       </AuthProvider>
     </div>
