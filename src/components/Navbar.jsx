@@ -45,7 +45,7 @@ const Navbar = () => {
         </Link>
         <nav
           className={twMerge(
-            'absolute right-0 top-[80px] flex w-[215px] flex-col gap-2 border-y border-l bg-primary p-4 text-lg font-semibold tracking-wider text-white transition duration-300 xl:static xl:h-auto xl:w-auto xl:flex-row xl:items-center xl:gap-8 xl:border-none xl:p-0',
+            'absolute right-0 top-[80px] z-40 flex w-[215px] flex-col gap-2 border-y border-l bg-primary p-4 text-lg font-semibold tracking-wider text-white transition duration-300 xl:static xl:h-auto xl:w-auto xl:flex-row xl:items-center xl:gap-8 xl:border-none xl:p-0',
             checked ? 'translate-x-0' : 'translate-x-full xl:translate-x-0',
           )}
         >
@@ -64,7 +64,7 @@ const Navbar = () => {
           {!isLogged && (
             <NavLink
               to="/logowanie"
-              className="mt-2 rounded-full border-2 border-white px-3.5 py-2 text-center xl:mt-0 xl:px-6"
+              className="mt-2 rounded-full border-2 border-white px-3.5 py-2 text-center transition hover:bg-white hover:text-primary xl:mt-0 xl:px-6"
             >
               Logowanie
             </NavLink>
@@ -79,7 +79,7 @@ const Navbar = () => {
               </NavLink>
               <button
                 onClick={(e) => handleLogout(e)}
-                className="mt-2 rounded-full border-2 border-white px-3.5 py-2 text-center xl:hidden"
+                className="mt-2 rounded-full border-2 border-white px-3.5 py-2 text-center transition hover:bg-white hover:text-primary xl:hidden"
               >
                 Wyloguj się
               </button>

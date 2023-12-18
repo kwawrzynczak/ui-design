@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 const tab = [
@@ -10,7 +10,7 @@ const History = () => {
   const [index, setIndex] = useState(0);
   return (
     <div className="mb-10">
-      <div className="lg:top:0 absolute left-1/2 top-44 flex w-fit -translate-x-1/2 items-start gap-4 rounded-xl border-4 border-white text-lg font-semibold tracking-wide text-white lg:left-10 lg:translate-x-0 lg:flex-col">
+      <div className="absolute left-1/2 top-44 flex w-fit -translate-x-1/2 items-start gap-4 rounded-xl border-4 border-white text-lg font-semibold tracking-wide text-white lg:left-20 lg:translate-x-0 lg:flex-col">
         {tab.map((item) => (
           <button
             key={item.id}

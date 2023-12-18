@@ -3,7 +3,7 @@ import LoginForm from '../components/LoginForm';
 
 const Login = () => {
   return (
-    <div className="mb-10 flex flex-col items-center gap-10">
+    <div className="mb-[158px] flex flex-col items-center gap-10">
       <h1 className="my-10 text-center text-2xl font-bold tracking-wider text-white lg:text-4xl ">
         Logowanie
       </h1>
