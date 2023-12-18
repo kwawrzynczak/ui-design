@@ -50,7 +50,11 @@ const Navbar = () => {
           )}
         >
           {tabs.map(({ name, path }) => (
-            <NavLink key={name} to={path}>
+            <NavLink
+              key={name}
+              to={path}
+              className={({ isActive }) => (isActive ? 'underline underline-offset-2' : '')}
+            >
               {name}
             </NavLink>
           ))}
@@ -60,7 +64,7 @@ const Navbar = () => {
           {!isLogged && (
             <NavLink
               to="/logowanie"
-              className="mt-2 rounded-full border-2 border-white px-3.5 py-2 text-center transition hover:bg-white hover:text-primary xl:mt-0 xl:px-6"
+              className="mt-2 rounded-full border-2 border-white px-3.5 py-2 text-center xl:mt-0 xl:px-6"
             >
               Logowanie
             </NavLink>
@@ -75,7 +79,7 @@ const Navbar = () => {
               </NavLink>
               <button
                 onClick={(e) => handleLogout(e)}
-                className="mt-2 rounded-full border-2 border-white px-3.5 py-2 text-center transition hover:bg-white hover:text-primary xl:hidden"
+                className="mt-2 rounded-full border-2 border-white px-3.5 py-2 text-center xl:hidden"
               >
                 Wyloguj się
               </button>
